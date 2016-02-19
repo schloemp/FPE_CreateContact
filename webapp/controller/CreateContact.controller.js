@@ -4,7 +4,10 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("FPE_CreateContact.controller.CreateContact", {
-
+		onSubmit: function() {
+		    var lPE = sap.ushell.Container.getService("ProcessEngine");
+		    lPE.executeNext();
+		}
 	});
 
 });
