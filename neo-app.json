@@ -33,7 +33,7 @@
 	}, {
 		"directive": "private",
 		"maxAge": 0,
-		"path": "*json"
+		"path": "*json" 
 	}, {
 		"directive": "private",
 		"maxAge": 0,
