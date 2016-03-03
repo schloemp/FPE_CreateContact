@@ -1,27 +1,30 @@
-<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="FPE_CreateContact.controller.CreateContact" xmlns:sap.ui.core="sap.ui.core" xmlns:sap.ui.layout.form="sap.ui.layout.form">
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:sap.ui.core="sap.ui.core" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" controllerName="FPE_CreateContact.controller.CreateContact">
 	<App>
 		<pages>
 			<Page title="{i18n&gt;title}">
 				<content>
-				<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="false" layout="ResponsiveGridLayout" id="__form0">
-				    <sap.ui.layout.form:content>
-				        <sap.ui.core:Title xmlns:sap.ui.core="sap.ui.core" text="Create Contact" id="__title0"/>
-				        <Label text="Customer" id="__label0"/>
-				        <Input width="100%" id="__input0" value="{data&gt;/CustomerName}" editable="false"/>
-				        <Label text="Contact Text" id="__label1"/>
-				        <Input width="100%" id="__input2" value="{data&gt;/ContactText}"/></sap.ui.layout.form:content>
-				</sap.ui.layout.form:SimpleForm>
+					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="__form0" layout="ResponsiveGridLayout">
+						<sap.ui.layout.form:content>
+							<sap.ui.core:Title xmlns:sap.ui.core="sap.ui.core" id="__title0" text="Create Contact"/>
+							<Label id="__label0" text="Customer"/>
+							<Input editable="false" id="__input0" value="{data&gt;/CustomerName}" width="100%"/>
+							<Label id="__label2" text="Address" width="100%"/>
+							<Input id="__input1" width="100%" editable="false" value="{data&gt;/CustomerAddress}"/>
+							<Label id="__label1" text="Contact Text"/>
+							<Input id="__input2" value="{data&gt;/ContactText}" width="100%"/>
+						</sap.ui.layout.form:content>
+					</sap.ui.layout.form:SimpleForm>
 				</content>
-			<footer>
-			    <Bar id="__bar0">
-			        <customData>
-			            <sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="sap-ui-fastnavgroup" value="true" writeToDom="true" id="__data1"/>
-			        </customData>
-			    <contentRight>
-			        <Button press="onSubmit" text="{i18n&gt;CreateContact}"/>
-			    </contentRight>
-			    </Bar>
-			</footer>
+				<footer>
+					<Bar id="__bar0">
+						<customData>
+							<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" id="__data1" key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+						</customData>
+						<contentRight>
+							<Button press="onSubmit" text="{i18n&gt;CreateContact}"/>
+						</contentRight>
+					</Bar>
+				</footer>
 			</Page>
 		</pages>
 	</App>
