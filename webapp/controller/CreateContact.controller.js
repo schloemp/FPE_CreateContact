@@ -10,11 +10,13 @@ sap.ui.define([
 			if (sap.ushell && sap.ushell.services.ProcessEngine) {
 				var lPE = sap.ushell.Container.getService("ProcessEngine");
 				this.PEStepContainer = lPE.getCurrentStepContainer();
-				var lModel = new JSONModel({
-					CustomerName: this.PEStepContainer.CustomerName,
-					ContactText: this.PEStepContainer.ContactText
-				});
-				this.getView().setModel(lModel, "data");
+				if (this.PEStepContainer) {
+					var lModel = new JSONModel({
+						CustomerName: this.PEStepContainer.CustomerName,
+						ContactText: this.PEStepContainer.ContactText
+					});
+					this.getView().setModel(lModel, "data");
+				}
 			}
 		},
 		onSubmit: function() {
