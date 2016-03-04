@@ -13,6 +13,7 @@ sap.ui.define([
 				if (this.PEStepContainer) {
 					var lModel = new JSONModel({
 						CustomerName: this.PEStepContainer.CustomerName,
+						CustomerAddress: this.PEStepContainer.CustomerAddress,
 						ContactText: this.PEStepContainer.ContactText
 					});
 					this.getView().setModel(lModel, "data");
